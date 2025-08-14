@@ -17,6 +17,10 @@ $cppDir = Join-Path $srcDir "cpp"
 # Ensure bin and obj directories exist
 if (!(Test-Path $binDir)) { New-Item -ItemType Directory -Path $binDir | Out-Null }
 if (!(Test-Path $objDir)) { New-Item -ItemType Directory -Path $objDir | Out-Null }
+if (!(Test-Path $cppDir)) { New-Item -ItemType Directory -Path $cppDir | Out-Null }
+if (!(Test-Path $includeDir)) { New-Item -ItemType Directory -Path $includeDir | Out-Null }
+if (!(Test-Path $libDir)) { New-Item -ItemType Directory -Path $libDir | Out-Null }
+
 
 # Find all .cpp files in cpp directory
 $cppFiles = Get-ChildItem -Path $cppDir -Filter *.cpp
